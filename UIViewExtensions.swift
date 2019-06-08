@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIView {
-    func removeGredient() {
+    func removeGradient() {
         if let layers = self.layer.sublayers {
             for layer in layers {
                 if (layer.name ?? "") == "gradientLayer" {
@@ -24,8 +24,8 @@ extension UIView {
     // function to add gradient based on angle
     // angle 0 for Horizontal and 90 for vertical
     
-    func addGredient(angle: Float = 0, cornerRadius: CGFloat = 0.0, colors: [UIColor] = [.red, .yellow]) {
-        self.removeGredient()
+    func addGradient(angle: Float = 0, cornerRadius: CGFloat = 0.0, colors: [UIColor] = [.red, .yellow]) {
+        self.removeGradient()
         let gradientLayer = CAGradientLayer()
         gradientLayer.name = "gradientLayer"
         gradientLayer.frame = self.bounds
