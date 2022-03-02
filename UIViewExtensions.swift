@@ -67,3 +67,15 @@ extension UIView {
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
+
+extension UILabel {
+     static  func getAttributedBoldText(text: String, boldText: String) -> NSMutableAttributedString {
+        let attString: NSMutableAttributedString = NSMutableAttributedString(string: text, attributes: [NSAttributedString.Key.font: AppFonts.regular.withSize(13.0), .foregroundColor: AppColors.themeBlack])
+        
+        attString.addAttributes([
+            .font: AppFonts.regular.withSize(34.0),
+            .foregroundColor: AppColors.themeBlack
+            ], range:(text as NSString).range(of: boldText))
+        return attString
+    }
+}
